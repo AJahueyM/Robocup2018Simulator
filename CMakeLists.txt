@@ -19,12 +19,12 @@ configure_file(
   "${PROJECT_SOURCE_DIR}/config.h.in"
   "${PROJECT_BINARY_DIR}/config.h"
   )
-include_directories("${PROJECT_BINARY_DIR}")
+include_directories("${PROJECT_BINARY_DIR}" src/spdlog/ src/inih/)
 
 # Define sources and executable
 file(GLOB_RECURSE SOURCES src/*.cpp)
 set(EXECUTABLE_NAME "myproject")
-add_executable(${EXECUTABLE_NAME} ${SOURCES} src/Utils.h src/Utils.cpp src/sketch.h  src/Subsystems/Tiles/Tile.cpp src/Subsystems/Tiles/Tile.h)
+add_executable(${EXECUTABLE_NAME} ${SOURCES} src/Utils.h src/Utils.cpp src/sketch.h  src/Subsystems/Tiles/Tile.cpp src/Subsystems/Tiles/Tile.h src/Subsystems/Tiles/Wall.cpp src/Subsystems/Tiles/Wall.h src/EctoSettings.cpp src/EctoSettings.h src/Subsystems/Tiles/DrawableTile.cpp src/Subsystems/Tiles/DrawableTile.h src/Subsystems/TileGrid.cpp src/Subsystems/TileGrid.h)
 
 
 # Detect and add SFML

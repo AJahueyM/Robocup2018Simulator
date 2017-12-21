@@ -6,8 +6,11 @@
 #define MYPROJECT_TILE_H
 
 #include <vector>
+#include "Wall.h"
+#include "../../EctoSettings.h"
+using namespace std;
 
-enum TileStatus {
+enum Status {
     Exists,
     NonExistent,
     Visited,
@@ -20,15 +23,56 @@ enum Type {
     Checkpoint,
     Forbidden
 };
-using namespace std;
+
+enum TileVictim {
+    Heat,
+    NoTileVictim
+};
+
+struct Walls {
+    Wall *top, *left, *bottom, *right;
+};
 
 class Tile {
 public:
+    Tile(int x, int y, Status status, Type type, Walls &walls, TileVictim victim = NoTileVictim);
+
+    void setType(Type &newType);
+
+    void setWalls(Walls &newWalls);
+
+    void setStatus(Status &newStatus);
+
+    void setWidth(int newWidth);
+
+    Type &getType();
+
+    Walls &getWalls();
+
+    const Walls &getWalls() const;
+
+    Status &getStatus();
+
+    int getWidth();
+
+    void setX(int x);
+
+    void setY(int y);
+
+    int getX() const;
+
+    int getY() const;
+
 protected:
+
 private:
-    TileStatus status;
+    EctoSettings& settings  = EctoSettings::getInstance();
+    int width;
+    int centerX, centerY;
+    Status status;
     Type type;
-    bool wallTop, wallBottom, wallLeft, wallRight;
+    Walls walls;
+    TileVictim &victim;
 };
 
 
