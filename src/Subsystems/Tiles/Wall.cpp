@@ -16,3 +16,11 @@ VisualVictim Wall::getVisualVictim() const{
     return wallVictim;
 }
 
+void Wall::setExists(bool exists) {
+    this->exists = exists;
+}
+
+void Wall::setVisualVictim(VisualVictim wallVictim) {
+    this->wallVictim = wallVictim;
+}
+

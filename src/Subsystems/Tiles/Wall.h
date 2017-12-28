@@ -14,11 +14,15 @@ enum VisualVictim {
 
 class Wall {
 public:
-    Wall(bool exists, VisualVictim wallVictim);
+    explicit Wall(bool exists = false, VisualVictim wallVictim = NoWallVictim);
 
     bool getExists() const;
 
     VisualVictim getVisualVictim() const;
+
+    void setExists(bool exists);
+
+    void setVisualVictim(VisualVictim wallVictim);
 
 protected:
 

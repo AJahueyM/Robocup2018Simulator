@@ -30,20 +30,18 @@ enum TileVictim {
 };
 
 struct Walls {
-    Wall *top, *left, *bottom, *right;
+    Wall top, left, bottom, right;
 };
 
 class Tile {
 public:
-    Tile(int x, int y, Status status, Type type, Walls &walls, TileVictim victim = NoTileVictim);
+    Tile( Status status, Type type, Walls &walls, TileVictim victim = NoTileVictim);
 
     void setType(Type &newType);
 
     void setWalls(Walls &newWalls);
 
     void setStatus(Status &newStatus);
-
-    void setWidth(int newWidth);
 
     Type &getType();
 
@@ -53,22 +51,9 @@ public:
 
     Status &getStatus();
 
-    int getWidth();
-
-    void setX(int x);
-
-    void setY(int y);
-
-    int getX() const;
-
-    int getY() const;
-
 protected:
 
 private:
-    EctoSettings& settings  = EctoSettings::getInstance();
-    int width;
-    int centerX, centerY;
     Status status;
     Type type;
     Walls walls;

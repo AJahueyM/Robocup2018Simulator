@@ -6,13 +6,22 @@
 #define MYPROJECT_DRAWABLETILE_H
 #include "Tile.h"
 #include <SFML/Graphics.hpp>
-class DrawableTile : public Tile {
+class DrawableTile{
 public:
-    DrawableTile(int x, int y, Status status, Type type, Walls &walls, TileVictim victim = NoTileVictim);
-    void draw(sf::RenderWindow &window);
+    DrawableTile(int x, int y, Tile& tile);
+    void draw(sf::RenderWindow &window) const;
     void update();
+    void setX(int x);
+    void setY(int y);
+    void setWidth(int width);
+    int getX();
+    int getY();
+    int getWidth();
 protected:
 private:
+    EctoSettings& settings  = EctoSettings::getInstance();
+    Tile& tile;
+    int centerX, centerY, width;
     int lineWidth;
     vector<sf::RectangleShape> sides;
 };

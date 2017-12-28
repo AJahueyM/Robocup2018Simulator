@@ -22,7 +22,7 @@ void updateFrame() {
 
 int main() {
     srand(time(NULL));
-    spd::set_level(spd::level::trace);
+    spd::set_level(spd::level::info);
 
     cout << "RoboRregos 2018 Maze Simulation Version= " << myproject_VERSION_MAJOR << '\n';
     cout << "By Alberto Jahuey Moncada\n";

@@ -4,15 +4,17 @@
 
 #include "DrawableTile.h"
 
-DrawableTile::DrawableTile(int x, int y, Status status, Type type, Walls &walls, TileVictim victim) : Tile(x, y, status,
-                                                                                                           type, walls,
-                                                                                                           victim) {
+DrawableTile::DrawableTile(int x, int y, Tile& tile) : tile(tile){
+    centerX = x;
+    centerY = y;
+    settings.setCurrentGroup("Tiles");
+    width = settings.getNumber("width");
     for(int i = 0; i < 4; ++i)
         sides.emplace_back(sf::RectangleShape());
     update();
 }
 
-void DrawableTile::draw(sf::RenderWindow &window) {
+void DrawableTile::draw(sf::RenderWindow &window) const{
     for(auto line : sides){
         window.draw(line);
     }
@@ -24,27 +26,27 @@ void DrawableTile::update() {
 
     sf::RectangleShape& right = sides[2];
     sf::RectangleShape& left =  sides[3];
-    Walls& walls = getWalls();
+    Walls& walls = tile.getWalls();
 
-    if(walls.top->getExists()) {
+    if(walls.top.getExists()) {
         top.setFillColor(sf::Color::Black);
     }else{
         top.setFillColor(sf::Color::Transparent);
     }
 
-    if(walls.bottom->getExists()){
+    if(walls.bottom.getExists()){
         bottom.setFillColor(sf::Color::Black);
     }else{
         bottom.setFillColor(sf::Color::Transparent);
     }
 
-    if(walls.right->getExists()){
+    if(walls.right.getExists()){
         right.setFillColor(sf::Color::Black);
     }else{
         right.setFillColor(sf::Color::Transparent);
     }
 
-    if(walls.left->getExists()){
+    if(walls.left.getExists()){
         left.setFillColor(sf::Color::Black);
     }else{
         left.setFillColor(sf::Color::Transparent);
@@ -57,8 +59,33 @@ void DrawableTile::update() {
     right.setSize(sf::Vector2f(lineWidth, getWidth()));
     left.setSize(sf::Vector2f(lineWidth, getWidth()));
 
-    top.setPosition(getX() - getWidth()/2, getY() - getWidth()/2);
-    bottom.setPosition(getX() - getWidth()/2, getY() + getWidth()/2 - lineWidth);
+    top.setPosition(getX() - getWidth()/2, getY()- getWidth()/2);
+    bottom.setPosition(getX()- getWidth()/2, getY() + getWidth()/2 - lineWidth);
     right.setPosition(getX() + getWidth()/2 - lineWidth, getY() - getWidth()/2);
-    left.setPosition(getX() - getWidth()/2, getY() - getWidth()/2);
+    left.setPosition(getX() - getWidth()/2, getY() - getWidth()/2 );
 }
+
+void DrawableTile::setX(int x) {
+    centerX = x;
+}
+
+void DrawableTile::setY(int y) {
+    centerY = y;
+}
+
+void DrawableTile::setWidth(int width) {
+    this->width = width;
+}
+int DrawableTile::getX() {
+    return centerX;
+}
+
+int DrawableTile::getY() {
+    return centerY;
+}
+
+int DrawableTile::getWidth() {
+    return width;
+}
+
+
