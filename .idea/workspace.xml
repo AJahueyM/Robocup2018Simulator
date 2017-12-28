@@ -12,12 +12,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="21b098b1-a06e-47a8-8930-e763d47991f9" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/src/Subsystems/Tiles/DrawableTile.cpp" afterPath="$PROJECT_DIR$/src/Subsystems/Tiles/DrawableTile.cpp" />
-      <change beforePath="$PROJECT_DIR$/src/Subsystems/Tiles/DrawableTile.h" afterPath="$PROJECT_DIR$/src/Subsystems/Tiles/DrawableTile.h" />
-      <change beforePath="$PROJECT_DIR$/src/Subsystems/Tiles/DrawableTileGrid.cpp" afterPath="$PROJECT_DIR$/src/Subsystems/Tiles/DrawableTileGrid.cpp" />
-      <change beforePath="$PROJECT_DIR$/src/Subsystems/Tiles/DrawableTileGrid.h" afterPath="$PROJECT_DIR$/src/Subsystems/Tiles/DrawableTileGrid.h" />
-      <change beforePath="$PROJECT_DIR$/src/Subsystems/Tiles/TileGrid.cpp" afterPath="$PROJECT_DIR$/src/Subsystems/Tiles/TileGrid.cpp" />
-      <change beforePath="$PROJECT_DIR$/src/Subsystems/Tiles/TileGrid.h" afterPath="$PROJECT_DIR$/src/Subsystems/Tiles/TileGrid.h" />
       <change beforePath="$PROJECT_DIR$/src/sketch.h" afterPath="$PROJECT_DIR$/src/sketch.h" />
     </list>
     <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
@@ -31,11 +25,11 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="CMakeBuildProfile:Debug" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="sketch.h" pinned="false" current-in-tab="false">
+      <file leaf-file-name="sketch.h" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/sketch.h">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="221">
-              <caret line="21" column="31" lean-forward="false" selection-start-line="21" selection-start-column="31" selection-end-line="21" selection-end-column="31" />
+            <state relative-caret-position="17">
+              <caret line="9" column="0" lean-forward="true" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
               <folding>
                 <element signature="e#40#68#0" expanded="true" />
               </folding>
@@ -53,11 +47,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="DrawableTile.cpp" pinned="false" current-in-tab="true">
+      <file leaf-file-name="DrawableTile.cpp" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Subsystems/Tiles/DrawableTile.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="527">
-              <caret line="64" column="68" lean-forward="true" selection-start-line="64" selection-start-column="68" selection-end-line="64" selection-end-column="68" />
+            <state relative-caret-position="646">
+              <caret line="53" column="0" lean-forward="false" selection-start-line="53" selection-start-column="0" selection-end-line="53" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -66,8 +60,8 @@
       <file leaf-file-name="DrawableTileGrid.cpp" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Subsystems/Tiles/DrawableTileGrid.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="374">
-              <caret line="22" column="5" lean-forward="false" selection-start-line="22" selection-start-column="5" selection-end-line="22" selection-end-column="5" />
+            <state relative-caret-position="221">
+              <caret line="13" column="51" lean-forward="false" selection-start-line="13" selection-start-column="51" selection-end-line="13" selection-end-column="51" />
               <folding />
             </state>
           </provider>
@@ -301,12 +295,12 @@
       <workItem from="1513808260881" duration="253000" />
       <workItem from="1513808546616" duration="31172000" />
       <workItem from="1514012520335" duration="37000" />
-      <workItem from="1514430864268" duration="13253000" />
+      <workItem from="1514430864268" duration="13591000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="72696000" />
+    <option name="totallyTimeSpent" value="73034000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -320,7 +314,7 @@
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22799575" sideWeight="0.49375" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.26617178" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.26511136" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39554614" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
@@ -545,24 +539,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Subsystems/Tiles/DrawableTileGrid.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="22" column="5" lean-forward="false" selection-start-line="22" selection-start-column="5" selection-end-line="22" selection-end-column="5" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/sketch.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="21" column="31" lean-forward="false" selection-start-line="21" selection-start-column="31" selection-end-line="21" selection-end-column="31" />
-          <folding>
-            <element signature="e#40#68#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Subsystems/Tiles/DrawableTile.h">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="306">
@@ -573,9 +549,27 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Subsystems/Tiles/DrawableTile.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="527">
-          <caret line="64" column="68" lean-forward="true" selection-start-line="64" selection-start-column="68" selection-end-line="64" selection-end-column="68" />
+        <state relative-caret-position="646">
+          <caret line="53" column="0" lean-forward="false" selection-start-line="53" selection-start-column="0" selection-end-line="53" selection-end-column="0" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Subsystems/Tiles/DrawableTileGrid.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="13" column="51" lean-forward="false" selection-start-line="13" selection-start-column="51" selection-end-line="13" selection-end-column="51" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/sketch.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="9" column="0" lean-forward="true" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
+          <folding>
+            <element signature="e#40#68#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

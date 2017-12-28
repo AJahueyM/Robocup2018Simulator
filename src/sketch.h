@@ -19,7 +19,7 @@ class Sketch {
 private:
     //Tile* tile;
     //DrawableTile* drawTile;
-    TileGrid grid = TileGrid( 2, 1);
+    TileGrid grid = TileGrid( 8, 8);
     DrawableTileGrid drawGrid = DrawableTileGrid(0,0,WIDTH, HEIGHT,grid);
 public:
 
