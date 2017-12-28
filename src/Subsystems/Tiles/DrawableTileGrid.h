@@ -9,10 +9,11 @@
 
 class DrawableTileGrid {
 public:
-    explicit DrawableTileGrid(TileGrid& grid);
+    explicit DrawableTileGrid(int x, int y, int width, int height, TileGrid& grid);
     void draw(sf::RenderWindow &window);
     void update();
 protected:
+    int x, y, width, height;
     TileGrid& grid;
     vector<vector<DrawableTile>> drawableGrid;
 private:

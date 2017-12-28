@@ -54,14 +54,14 @@ void DrawableTile::update() {
 
     lineWidth = getWidth()*.05;
 
-    top.setSize(sf::Vector2f(getWidth(), lineWidth));
-    bottom.setSize(sf::Vector2f(getWidth(), lineWidth));
-    right.setSize(sf::Vector2f(lineWidth, getWidth()));
-    left.setSize(sf::Vector2f(lineWidth, getWidth()));
+    top.setSize(sf::Vector2f(getWidth(), getLineWidth()));
+    bottom.setSize(sf::Vector2f(getWidth(), getLineWidth()));
+    right.setSize(sf::Vector2f(getLineWidth(), getWidth()));
+    left.setSize(sf::Vector2f(getLineWidth(), getWidth()));
 
     top.setPosition(getX() - getWidth()/2, getY()- getWidth()/2);
-    bottom.setPosition(getX()- getWidth()/2, getY() + getWidth()/2 - lineWidth);
-    right.setPosition(getX() + getWidth()/2 - lineWidth, getY() - getWidth()/2);
+    bottom.setPosition(getX()- getWidth()/2, getY() + getWidth()/2 - getLineWidth());
+    right.setPosition(getX() + getWidth()/2 - getLineWidth(), getY() - getWidth()/2);
     left.setPosition(getX() - getWidth()/2, getY() - getWidth()/2 );
 }
 
@@ -86,6 +86,10 @@ int DrawableTile::getY() {
 
 int DrawableTile::getWidth() {
     return width;
+}
+
+int DrawableTile::getLineWidth() {
+    return lineWidth;
 }
 
 

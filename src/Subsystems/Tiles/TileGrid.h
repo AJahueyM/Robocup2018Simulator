@@ -10,7 +10,9 @@
 using namespace std;
 class TileGrid {
 public:
-    TileGrid( int width, int height, int sizeX, int sizeY);
+    TileGrid(int sizeX, int sizeY);
+    int getSizeX();
+    int getSizeY();
     vector<vector<Tile>>& getGrid();
 protected:
     vector<vector<Tile>> tileGrid;

@@ -4,11 +4,21 @@
 
 #include "DrawableTileGrid.h"
 
-DrawableTileGrid::DrawableTileGrid(TileGrid &grid) : grid(grid) {
+DrawableTileGrid::DrawableTileGrid(int x, int y, int width, int height, TileGrid& grid) : grid(grid) {
+    this->x = x;
+    this->y = y;
+    this->width = width;
+    this->height = height;
+
+    double tileWidth = width / grid.getSizeX();
     for(int i = 0; i < grid.getGrid().size(); ++i){
         drawableGrid.emplace_back();
         for(int j = 0; j < grid.getGrid()[i].size(); ++j){
             drawableGrid[i].emplace_back(DrawableTile(i, j, grid.getGrid()[i][j]));
+            drawableGrid[i][j].setWidth(tileWidth);
+            drawableGrid[i][j].setX(tileWidth / 2 + (tileWidth * i));
+            drawableGrid[i][j].setY(tileWidth / 2 + (tileWidth * j));
+
         }
     }
 }

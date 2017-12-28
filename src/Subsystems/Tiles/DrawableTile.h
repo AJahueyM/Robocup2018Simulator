@@ -17,12 +17,12 @@ public:
     int getX();
     int getY();
     int getWidth();
+    int getLineWidth();
 protected:
 private:
     EctoSettings& settings  = EctoSettings::getInstance();
     Tile& tile;
-    int centerX, centerY, width;
-    int lineWidth;
+    int centerX, centerY, width, lineWidth;
     vector<sf::RectangleShape> sides;
 };
 

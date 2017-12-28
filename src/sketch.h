@@ -17,45 +17,38 @@ unsigned int HEIGHT = 800;
 
 class Sketch {
 private:
-    Tile* tile;
-    DrawableTile* drawTile;
-    TileGrid grid = TileGrid(WIDTH, HEIGHT, 5, 5);
-    DrawableTileGrid drawGrid = DrawableTileGrid(grid);
+    //Tile* tile;
+    //DrawableTile* drawTile;
+    TileGrid grid = TileGrid( 2, 1);
+    DrawableTileGrid drawGrid = DrawableTileGrid(0,0,WIDTH, HEIGHT,grid);
 public:
 
     void setup() {
         Walls wall;
-        tile = new Tile(Visited, Normal, wall);
 
-        drawTile = new DrawableTile(WIDTH/2,HEIGHT/2,*tile);
+        //drawTile = new DrawableTile(WIDTH/2,HEIGHT/2,*tile);
     }
 
     void update() {
-        //drawGrid.update();
-        drawTile->update();
-        Walls& wall = tile->getWalls();
-        wall.bottom.setExists(sf::Keyboard::isKeyPressed(sf::Keyboard::A));
-        wall.top.setExists(sf::Keyboard::isKeyPressed(sf::Keyboard::S));
-        wall.right.setExists(sf::Keyboard::isKeyPressed(sf::Keyboard::D));
-        wall.left.setExists(sf::Keyboard::isKeyPressed(sf::Keyboard::F));
+        drawGrid.update();
+
     }
 
     void draw(sf::RenderWindow &window) {
         WIDTH = window.getSize().x;
         HEIGHT = window.getSize().y;
 
-        sf::RectangleShape x(sf::Vector2f(WIDTH, 4)), y(sf::Vector2f(4, HEIGHT));
-        x.setPosition(sf::Vector2f(0, HEIGHT/2 - 2));
-        y.setPosition(sf::Vector2f(WIDTH/2 - 2, 0));
-        x.setFillColor(sf::Color::Blue);
-        y.setFillColor(sf::Color::Black);
-        drawTile->draw(window);
+//        sf::RectangleShape x(sf::Vector2f(WIDTH, 4)), y(sf::Vector2f(4, HEIGHT));
+//        x.setPosition(sf::Vector2f(0, HEIGHT/2 - 2));
+//        y.setPosition(sf::Vector2f(WIDTH/2 - 2, 0));
+//        x.setFillColor(sf::Color::Blue);
+//        y.setFillColor(sf::Color::Black);
+//
+//        window.draw(x);
+//        window.draw(y);
 
-        window.draw(x);
-        window.draw(y);
 
-
-        //drawGrid.draw(window);
+        drawGrid.draw(window);
 
     }
 };
