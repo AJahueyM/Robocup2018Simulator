@@ -24,11 +24,11 @@ int main() {
     srand(time(NULL));
     spd::set_level(spd::level::info);
 
-    cout << "RoboRregos 2018 Maze Simulation Version= " << myproject_VERSION_MAJOR << '\n';
+    cout << "RoboRregos 2018 Maze Simulation Version= " << Robocup2018Simulator_VERSION_MAJOR << '\n';
     cout << "By Alberto Jahuey Moncada\n";
     sketch = new Sketch();
     sketch->setup();
-    sf::RenderWindow window(sf::VideoMode(WIDTH, HEIGHT), "Maze Simulation " + to_string(myproject_VERSION_MAJOR));
+    sf::RenderWindow window(sf::VideoMode(WIDTH, HEIGHT), "Maze Simulation " + to_string(Robocup2018Simulator_VERSION_MAJOR));
     sf::View view(window.getDefaultView());
     thread updateThread(updateFrame);
 

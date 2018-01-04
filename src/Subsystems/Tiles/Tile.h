@@ -2,8 +2,8 @@
 // Created by Alberto Jahuey on 12/20/2017.
 //
 
-#ifndef MYPROJECT_TILE_H
-#define MYPROJECT_TILE_H
+#ifndef ROBOCUP2018SIMULATOR_TILE_H
+#define ROBOCUP2018SIMULATOR_TILE_H
 
 #include <vector>
 #include "Wall.h"
@@ -61,4 +61,4 @@ private:
 };
 
 
-#endif //MYPROJECT_TILE_H
+#endif //ROBOCUP2018SIMULATOR_TILE_H

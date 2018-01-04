@@ -10,8 +10,8 @@
 
 using namespace std;
 
-#ifndef MYPROJECT_SKETCH_H
-#define MYPROJECT_SKETCH_H
+#ifndef ROBOCUP2018SIMULATOR_SKETCH_H
+#define ROBOCUP2018SIMULATOR_SKETCH_H
 unsigned int WIDTH = 800;
 unsigned int HEIGHT = 800;
 
@@ -53,4 +53,4 @@ public:
     }
 };
 
-#endif //MYPROJECT_SKETCH_H
+#endif //ROBOCUP2018SIMULATOR_SKETCH_H

@@ -2,8 +2,8 @@
 // Created by Alberto Jahuey on 12/21/2017.
 //
 
-#ifndef MYPROJECT_TILEGRID_H
-#define MYPROJECT_TILEGRID_H
+#ifndef ROBOCUP2018SIMULATOR_TILEGRID_H
+#define ROBOCUP2018SIMULATOR_TILEGRID_H
 #include <vector>
 #include <SFML/Graphics.hpp>
 #include "Tile.h"
@@ -21,4 +21,4 @@ private:
 };
 
 
-#endif //MYPROJECT_TILEGRID_H
+#endif //ROBOCUP2018SIMULATOR_TILEGRID_H

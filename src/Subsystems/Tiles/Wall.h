@@ -2,8 +2,8 @@
 // Created by Alberto Jahuey on 12/20/2017.
 //
 
-#ifndef MYPROJECT_WALL_H
-#define MYPROJECT_WALL_H
+#ifndef ROBOCUP2018SIMULATOR_WALL_H
+#define ROBOCUP2018SIMULATOR_WALL_H
 
 enum VisualVictim {
     Stable,
@@ -32,4 +32,4 @@ private:
 };
 
 
-#endif //MYPROJECT_WALL_H
+#endif //ROBOCUP2018SIMULATOR_WALL_H

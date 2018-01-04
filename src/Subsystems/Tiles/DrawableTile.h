@@ -2,8 +2,8 @@
 // Created by Alberto Jahuey on 12/20/2017.
 //
 
-#ifndef MYPROJECT_DRAWABLETILE_H
-#define MYPROJECT_DRAWABLETILE_H
+#ifndef ROBOCUP2018SIMULATOR_DRAWABLETILE_H
+#define ROBOCUP2018SIMULATOR_DRAWABLETILE_H
 #include "Tile.h"
 #include <SFML/Graphics.hpp>
 class DrawableTile{
@@ -27,4 +27,4 @@ private:
 };
 
 
-#endif //MYPROJECT_DRAWABLETILE_H
+#endif //ROBOCUP2018SIMULATOR_DRAWABLETILE_H
