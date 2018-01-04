@@ -41,6 +41,7 @@ endif()
 # Install target
 install(TARGETS ${EXECUTABLE_NAME} DESTINATION bin)
 
+target_link_libraries(${EXECUTABLE_NAME} pthread)
 
 # CPack packaging
 include(InstallRequiredSystemLibraries)
