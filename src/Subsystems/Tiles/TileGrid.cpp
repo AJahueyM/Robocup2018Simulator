@@ -8,7 +8,7 @@ TileGrid::TileGrid(int sizeX, int sizeY) {
     for(int i = 0 ; i < sizeX; ++i){
         tileGrid.emplace_back();
         for(int j = 0; j < sizeY; ++j){
-            Walls wall;
+            TileWalls wall;
             wall.top.setExists(true);
             wall.bottom.setExists(true);
             wall.right.setExists(true);

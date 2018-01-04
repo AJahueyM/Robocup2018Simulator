@@ -8,55 +8,34 @@
 #include <vector>
 #include "Wall.h"
 #include "../../EctoSettings.h"
+#include "TileTypes.h"
 using namespace std;
 
-enum Status {
-    Exists,
-    NonExistent,
-    Visited,
-    NonVisisted
-};
-
-enum Type {
-    Normal,
-    Bumper,
-    Checkpoint,
-    Forbidden
-};
-
-enum TileVictim {
-    Heat,
-    NoTileVictim
-};
-
-struct Walls {
-    Wall top, left, bottom, right;
-};
 
 class Tile {
 public:
-    Tile( Status status, Type type, Walls &walls, TileVictim victim = NoTileVictim);
+    Tile( TileStatus status, TileType type, TileWalls &walls, TileVictim victim = NoTileVictim);
 
-    void setType(Type &newType);
+    void setType(TileType &newType);
 
-    void setWalls(Walls &newWalls);
+    void setWalls(TileWalls &newWalls);
 
-    void setStatus(Status &newStatus);
+    void setStatus(TileStatus &newStatus);
 
-    Type &getType();
+    TileType &getType();
 
-    Walls &getWalls();
+    TileWalls &getWalls();
 
-    const Walls &getWalls() const;
+    const TileWalls &getWalls() const;
 
-    Status &getStatus();
+    TileStatus &getStatus();
 
 protected:
 
 private:
-    Status status;
-    Type type;
-    Walls walls;
+    TileStatus status;
+    TileType type;
+    TileWalls walls;
     TileVictim &victim;
 };
 

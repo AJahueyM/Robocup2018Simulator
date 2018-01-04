@@ -4,35 +4,35 @@
 
 #include "Tile.h"
 
-Tile::Tile(Status status, Type type, Walls &walls, TileVictim victim) : status(status), type(type), walls(walls),
+Tile::Tile(TileStatus status, TileType type, TileWalls &walls, TileVictim victim) : status(status), type(type), walls(walls),
                                                                           victim(victim) {
 }
 
-void Tile::setType(Type &newType) {
+void Tile::setType(TileType &newType) {
     type = newType;
 }
 
-void Tile::setWalls(Walls &newWalls) {
+void Tile::setWalls(TileWalls &newWalls) {
     walls = newWalls;
 }
 
-void Tile::setStatus(Status &newStatus) {
+void Tile::setStatus(TileStatus &newStatus) {
     status = newStatus;
 }
 
-Type &Tile::getType(){
+TileType &Tile::getType(){
     return type;
 }
 
-Walls &Tile::getWalls() {
+TileWalls &Tile::getWalls() {
     return walls;
 }
 
-const Walls &Tile::getWalls() const{
+const TileWalls &Tile::getWalls() const{
     return walls;
 }
 
-Status &Tile::getStatus(){
+TileStatus &Tile::getStatus(){
     return status;
 }
 

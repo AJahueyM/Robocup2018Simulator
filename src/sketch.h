@@ -24,7 +24,7 @@ private:
 public:
 
     void setup() {
-        Walls wall;
+        TileWalls wall;
 
         //drawTile = new DrawableTile(WIDTH/2,HEIGHT/2,*tile);
     }

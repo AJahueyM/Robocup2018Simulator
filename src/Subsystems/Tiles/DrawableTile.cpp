@@ -26,7 +26,7 @@ void DrawableTile::update() {
 
     sf::RectangleShape& right = sides[2];
     sf::RectangleShape& left =  sides[3];
-    Walls& walls = tile.getWalls();
+    TileWalls& walls = tile.getWalls();
 
     if(walls.top.getExists()) {
         top.setFillColor(sf::Color::Black);

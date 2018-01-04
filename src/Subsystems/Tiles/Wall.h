@@ -5,12 +5,7 @@
 #ifndef ROBOCUP2018SIMULATOR_WALL_H
 #define ROBOCUP2018SIMULATOR_WALL_H
 
-enum VisualVictim {
-    Stable,
-    Harmed,
-    Unharmed,
-    NoWallVictim
-};
+#include "WallTypes.h"
 
 class Wall {
 public:
