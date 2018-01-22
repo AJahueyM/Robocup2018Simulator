@@ -5,10 +5,13 @@
 #include "Subsystems/Tiles/Tile.h"
 #include "Subsystems/Tiles/DrawableTile.h"
 #include "Subsystems/Tiles/DrawableTileGrid.h"
+#include "Subsystems/MapParser.h"
 #include <vector>
 #include <iostream>
+#include "spdlog/spdlog.h"
 
 using namespace std;
+namespace spd = spdlog;
 
 #ifndef MYPROJECT_SKETCH_H
 #define MYPROJECT_SKETCH_H
@@ -20,17 +23,21 @@ private:
     //Tile* tile;
     //DrawableTile* drawTile;
     TileGrid grid = TileGrid( 8, 8);
-    DrawableTileGrid drawGrid = DrawableTileGrid(0,0,WIDTH, HEIGHT,grid);
+    DrawableTileGrid* drawGrid; // = DrawableTileGrid(0,0,WIDTH, HEIGHT,grid);
+    MapParser parser = MapParser("Map/");
+    shared_ptr<spd::logger> log = spd::stdout_color_mt("Sketch");
+
 public:
 
     void setup() {
+        log->trace("Setup");
         Walls wall;
 
         //drawTile = new DrawableTile(WIDTH/2,HEIGHT/2,*tile);
     }
 
     void update() {
-        drawGrid.update();
+        drawGrid->update();
 
     }
 
@@ -48,7 +55,7 @@ public:
 //        window.draw(y);
 
 
-        drawGrid.draw(window);
+        drawGrid->draw(window);
 
     }
 };

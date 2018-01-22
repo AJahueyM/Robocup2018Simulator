@@ -1,0 +1,37 @@
+size_X size_Y robotStart_X robotStart_Y
+status type wall_left visualVictim wall_top visualVictim wall_right visualVictim wall_low visualVictim victim
+
+
+
+codigos
+
+status:
+    Exists = 0
+    NonExistent = 1
+    Visited = 2
+    NonVisited = 3
+
+type:
+    Normal = 0
+    Bumper = 1
+    Checkpoint = 2
+    Forbidden = 3
+
+walls:
+    NonExistent = 0
+    Existent = 1
+
+visualVictim:
+    Stable = 0
+    Harmed = 1
+    Unharmed = 2
+    NoWallVictim = 3
+
+victim:
+    Heat = 0
+    NoTileVictim = 1
+
+Example: (Map is 5 x 5, Robot starts at (2,3), the only defined tile exists, it is normal, has its left and top walls and there is no tile vitcim there, also the wall at the left has a stable visual victim )
+5 5 2 3
+0 0 1 0 1 1 0 0 0 0 1
+

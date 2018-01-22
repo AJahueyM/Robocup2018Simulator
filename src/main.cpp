@@ -23,9 +23,9 @@ void updateFrame() {
 int main() {
     srand(time(NULL));
     spd::set_level(spd::level::info);
-
-    cout << "RoboRregos 2018 Maze Simulation Version= " << myproject_VERSION_MAJOR << '\n';
-    cout << "By Alberto Jahuey Moncada\n";
+    shared_ptr<spd::logger> log = spd::stdout_color_mt("Main");
+    log->info("RoboRregos 2018 Maze Simulation Version= {}",myproject_VERSION_MAJOR );
+    log->info("By Alberto Jahuey Moncada");
     sketch = new Sketch();
     sketch->setup();
     sf::RenderWindow window(sf::VideoMode(WIDTH, HEIGHT), "Maze Simulation " + to_string(myproject_VERSION_MAJOR));

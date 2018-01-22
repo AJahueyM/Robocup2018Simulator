@@ -20,9 +20,13 @@ TileGrid::TileGrid(int sizeX, int sizeY) {
     }
 }
 
-vector<vector<Tile>>& TileGrid::getGrid() {
+TileGrid::TileGrid(vector<vector<Tile>> &tiles) : tileGrid(tiles) {
+    this->tileGrid = tiles;
+}
+vector<vector<Tile>> TileGrid::getGrid() const {
     return tileGrid;
 }
+
 
 int TileGrid::getSizeX() {
     return tileGrid.size();
@@ -31,5 +35,10 @@ int TileGrid::getSizeX() {
 int TileGrid::getSizeY() {
     return tileGrid[0].size();
 }
+
+void TileGrid::setGrid(vector<vector<Tile>> &tileGrid) {
+    this->tileGrid = tileGrid;
+}
+
 
 

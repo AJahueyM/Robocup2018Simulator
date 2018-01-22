@@ -1,7 +1,7 @@
 #Change this if you need to target a specific CMake version
 cmake_minimum_required(VERSION 2.6)
 
-set(CMAKE_CXX_STANDARD 17)
+set(CMAKE_CXX_STANDARD 14)
 # Enable debug symbols by default
 # must be done before project() statement
 if(NOT CMAKE_BUILD_TYPE)
@@ -24,7 +24,7 @@ include_directories("${PROJECT_BINARY_DIR}" src/spdlog/ src/inih/)
 # Define sources and executable
 file(GLOB_RECURSE SOURCES src/*.cpp)
 set(EXECUTABLE_NAME "myproject")
-add_executable(${EXECUTABLE_NAME} ${SOURCES} src/Utils.h src/Utils.cpp src/sketch.h  src/Subsystems/Tiles/Tile.cpp src/Subsystems/Tiles/Tile.h src/Subsystems/Tiles/Wall.cpp src/Subsystems/Tiles/Wall.h src/EctoSettings.cpp src/EctoSettings.h src/Subsystems/Tiles/DrawableTile.cpp src/Subsystems/Tiles/DrawableTile.h src/Subsystems/Tiles/TileGrid.cpp src/Subsystems/Tiles/TileGrid.h src/Subsystems/Tiles/DrawableTileGrid.cpp src/Subsystems/Tiles/DrawableTileGrid.h)
+add_executable(${EXECUTABLE_NAME} ${SOURCES} src/Utils.h src/Utils.cpp src/sketch.h  src/Subsystems/Tiles/Tile.cpp src/Subsystems/Tiles/Tile.h src/Subsystems/Tiles/Wall.cpp src/Subsystems/Tiles/Wall.h src/EctoSettings.cpp src/EctoSettings.h src/Subsystems/Tiles/DrawableTile.cpp src/Subsystems/Tiles/DrawableTile.h src/Subsystems/Tiles/TileGrid.cpp src/Subsystems/Tiles/TileGrid.h src/Subsystems/Tiles/DrawableTileGrid.cpp src/Subsystems/Tiles/DrawableTileGrid.h src/Subsystems/Map.cpp src/Subsystems/Map.h)
 
 
 # Detect and add SFML

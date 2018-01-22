@@ -10,10 +10,12 @@
 using namespace std;
 class TileGrid {
 public:
-    TileGrid(int sizeX, int sizeY);
+    explicit TileGrid(int sizeX, int sizeY);
+    explicit TileGrid(vector<vector<Tile>>& tiles);
     int getSizeX();
     int getSizeY();
-    vector<vector<Tile>>& getGrid();
+    vector<vector<Tile>> getGrid() const;
+    void setGrid(vector<vector<Tile>> &tileGrid);
 protected:
     vector<vector<Tile>> tileGrid;
 private:
