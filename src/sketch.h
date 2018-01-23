@@ -2,6 +2,7 @@
 // Created by alber on 11/1/2017.
 //
 #include <SFML/Graphics.hpp>
+#include "Subsystems/MapParser.h"
 #include "Subsystems/Tiles/Tile.h"
 #include "Subsystems/Tiles/DrawableTile.h"
 #include "Subsystems/Tiles/DrawableTileGrid.h"
@@ -20,17 +21,19 @@ private:
     //Tile* tile;
     //DrawableTile* drawTile;
     TileGrid grid = TileGrid( 8, 8);
-    DrawableTileGrid drawGrid = DrawableTileGrid(0,0,WIDTH, HEIGHT,grid);
+    MapParser parser = MapParser("Map/");
+    DrawableTileGrid* drawGrid;
 public:
 
     void setup() {
         TileWalls wall;
-
+        grid = parser.getGrid("hi.map");
+        drawGrid = new DrawableTileGrid(0,0,WIDTH, HEIGHT,grid);
         //drawTile = new DrawableTile(WIDTH/2,HEIGHT/2,*tile);
     }
 
     void update() {
-        drawGrid.update();
+        drawGrid->update();
 
     }
 
@@ -48,7 +51,7 @@ public:
 //        window.draw(y);
 
 
-        drawGrid.draw(window);
+        drawGrid->draw(window);
 
     }
 };

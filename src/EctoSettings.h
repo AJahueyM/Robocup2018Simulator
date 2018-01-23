@@ -125,7 +125,7 @@ public:
 private:
     shared_ptr<spd::logger> log = spd::stdout_color_mt("EctoSettings");
 
-    const string SETTINGS_FILE_PATH = "/home/lvuser/settings.ini";
+    const string SETTINGS_FILE_PATH = "Settings.ini";
     const string errorAccessingFile = "Couldn't load file";
     const string errorChangingFile = "Couldn't change file, returning to previous valid .ini";
     const string errorReturnBool = "Couldn't get boolean, returning false.";

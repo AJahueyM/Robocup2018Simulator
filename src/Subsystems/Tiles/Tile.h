@@ -36,7 +36,7 @@ private:
     TileStatus status;
     TileType type;
     TileWalls walls;
-    TileVictim &victim;
+    TileVictim victim;
 };
 
 

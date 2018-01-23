@@ -11,6 +11,7 @@ using namespace std;
 class TileGrid {
 public:
     TileGrid(int sizeX, int sizeY);
+    TileGrid(vector<vector<Tile>> &tileGrid);
     int getSizeX();
     int getSizeY();
     vector<vector<Tile>>& getGrid();

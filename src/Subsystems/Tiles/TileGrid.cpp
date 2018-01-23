@@ -20,6 +20,10 @@ TileGrid::TileGrid(int sizeX, int sizeY) {
     }
 }
 
+TileGrid::TileGrid(vector<vector<Tile>> &tileGrid) {
+    this->tileGrid = tileGrid;
+}
+
 vector<vector<Tile>>& TileGrid::getGrid() {
     return tileGrid;
 }
