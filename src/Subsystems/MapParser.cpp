@@ -28,6 +28,7 @@ vector<string> MapParser::getPathsOnDir() {
 }
 
 TileGrid MapParser::getGrid(const string &gridName) {
+    log->info("Reading grid {}", gridName);
     bool validName = false;
     for(const string& i : getPathsOnDir()){
         if(i == gridName){
@@ -66,12 +67,12 @@ TileGrid MapParser::getGrid(const string &gridName) {
     int currentColumn = 0;
     while(getline(file, stringBuffer)) {
         lineCounter++;
-        log->info("Reading line: {} from: {}", lineCounter, path + gridName);
+        log->trace("Reading line: {} from: {}", lineCounter, path + gridName);
         streamBuffer = stringstream(stringBuffer);
         vector<int> tileSettings;
         while (streamBuffer >> numBuffer) {
             tileSettings.emplace_back(numBuffer);
-            log->info("Read at line: {} value: {}", lineCounter, numBuffer);
+            log->trace("Read at line: {} value: {}", lineCounter, numBuffer);
             if(streamBuffer.peek() == ' '){
                 streamBuffer.ignore();
             }
@@ -102,7 +103,7 @@ TileGrid MapParser::getGrid(const string &gridName) {
         }
         tileGrid[currentColumn-1].emplace_back(tile);
     }
-    log->info("Size of map: X= {} Y= {} ", tileGrid.size(), tileGrid[0].size());
+    log->info("Done, Size of map: X= {} Y= {} ", tileGrid.size(), tileGrid[0].size());
     return TileGrid(tileGrid);
 }
 

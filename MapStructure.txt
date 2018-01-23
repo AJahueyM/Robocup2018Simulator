@@ -1,0 +1,1 @@
+sizeX robotStartX robotStartY
