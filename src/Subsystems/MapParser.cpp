@@ -100,7 +100,6 @@ TileGrid MapParser::getGrid(const string &gridName) {
         }else{
             currentColumn = 1;
         }
-        cout << "Reached currentColumn"<< currentColumn << endl;
         tileGrid[currentColumn-1].emplace_back(tile);
     }
     log->info("Size of map: X= {} Y= {} ", tileGrid.size(), tileGrid[0].size());
